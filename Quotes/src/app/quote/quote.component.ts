@@ -20,6 +20,11 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
+  completeGoal(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index, 1);
+    }
+  }
 
   constructor() { }
 
