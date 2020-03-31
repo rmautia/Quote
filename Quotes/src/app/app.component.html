@@ -1,0 +1,10 @@
+<div>
+  <h1>Inspirational Quotes</h1>
+  <ul>
+    <li *ngFor= 'let quote of quotes'>
+      {{quote.name}} 
+
+    </li>
+  </ul>
+  <p *ngIf='quotes.length > 5'>Good work fam, keep contributing your quotes, someone needs you out there</p>
+</div>
