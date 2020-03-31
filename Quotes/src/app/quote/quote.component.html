@@ -1,11 +1,22 @@
+<div class="container">
 <h1>Inspirational quotes</h1>
 <hr>
-<ul>
-  <div *ngFor='let quote of quotes;let i = index'>
-    <li appHighlight>{{quote.name}} made on {{quote.completeDate|date}} </li>
-    <button (click)='toggleDetails(i)'>Quote Details</button>
-    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-detail>
-  </div>
-</ul>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let quote of quotes;let i = index'>
+                <div>
+                    <h4 appHighlight>{{quote.name}} made on {{quote.completeDate|date}} </h4>
+                    <button (click)='toggleDetails(i)' class="btn btn-warning">Quote Details</button>
+                </div>
+
+                <div *ngIf='quote.showDescription'>
+                    <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-detail>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <p *ngIf='quotes.length > 5'>Good work fam, keep contributing your quotes, someone needs you out there</p>
-  
+</div>
