@@ -9,13 +9,17 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    {id:1, name:'The American Dream',description:'...'},
-    {id:2,name:'The rich also cry',description:'...'},
-    {id:3,name:'to catch a mockingBird',description:'...'},
-    {id:4,name:'a bird in hand is worth two in the bush',description:'...'},
-    {id:5,name:'The great Gatsby', description:'...'},
-    {id:6,name:'In the quest to find yourself, you may lose yourself', description:'...'},
+    new Quote (1, 'The American Dream','there shall come a point where everyone will be equal'),
+    new Quote (2,'The rich also cry','it does not matter how rich you are, some things, money cannot buy'),
+    new Quote (3,'to catch a mockingBird','what are your approaches to life, are they worht the while'),
+    new Quote (4,'a bird in hand is worth two in the bush','be grateful of what you have at hand, what you wish foy could be vanity.'),
+    new Quote (5,'The great Gatsby','overcome all odds to be the greatest you could ever be.'),
+    new Quote (6,'In the quest to find yourself, you may lose yourself', 'have vision and be focused')
   ];
+
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
 
   constructor() { }
 

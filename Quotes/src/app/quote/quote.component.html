@@ -1,10 +1,11 @@
-<div>
-    <h1>Inspirational Quotes</h1>
-    <ul>
-      <li *ngFor= 'let quote of quotes'>
-        {{quote.name}} 
-  
-      </li>
-    </ul>
-    <p *ngIf='quotes.length > 5'>Good work fam, keep contributing your quotes, someone needs you out there</p>
+<h1>Inspirational quotes</h1>
+<hr>
+<ul>
+  <div *ngFor='let quote of quotes;let i = index'>
+    <li>{{quote.name}}</li>
+    <button (click)='toggleDetails(i)'>Quote Details</button>
+    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
   </div>
+</ul>
+    <p *ngIf='quotes.length > 5'>Good work fam, keep contributing your quotes, someone needs you out there</p>
+  
