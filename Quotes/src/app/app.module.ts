@@ -7,6 +7,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { HighlightDirective } from './highlight.directive';
 import { RelativeTimePipe } from './pipe/relative-time.pipe';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RelativeTimePipe } from './pipe/relative-time.pipe';
     QuoteDetailComponent,
     HighlightDirective,
     RelativeTimePipe,
+    QuoteFormComponent,
     
   ],
   imports: [
