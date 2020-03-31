@@ -4,7 +4,7 @@
   <div *ngFor='let quote of quotes;let i = index'>
     <li appHighlight>{{quote.name}} made on {{quote.completeDate|date}} </li>
     <button (click)='toggleDetails(i)'>Quote Details</button>
-    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeGoal($event, i)'></app-quote-detail>
+    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event, i)'></app-quote-detail>
   </div>
 </ul>
     <p *ngIf='quotes.length > 5'>Good work fam, keep contributing your quotes, someone needs you out there</p>

@@ -6,13 +6,22 @@ import { DatePipe } from '@angular/common';
 })
 export class RelativeTimePipe implements PipeTransform {
 
-  transform(value: any): any {
-    if (value) {
-      const differenceInSeconds = Math.floor((+new Date() - +new Date(value)) / 1000);
-      if (differenceInSeconds < 30){
-        return 'Just now';
-      }
+  transform(value: any): number {
+    let today: Date = new Date(); //get current date and time
+    let todayWithNoTime: any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
+    var dateDifference = Math.abs(value - todayWithNoTime)// returns value in milliseconds
+    const secondsInADay = 86400; //60 seconds*60 minutes in an hour *24 hours
+
+    var dateDifferenceSeconds = dateDifference * 0.001; //converts to seconds
+
+    var dateCount = dateDifferenceSeconds / secondsInADay;
+
+    if (dateCount >= 1) {
+      return dateCount;
+    } else {
+      return 0;
     }
   }
-  
 }
+
+

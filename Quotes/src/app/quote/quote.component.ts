@@ -9,20 +9,25 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    new Quote (1, 'The American Dream','there shall come a point where everyone will be equal',new Date(2020,3,28)),
-    new Quote (2,'The rich also cry','it does not matter how rich you are, some things, money cannot buy',new Date(2020,3,28)),
-    new Quote (3,'to catch a mockingBird','what are your approaches to life, are they worht the while' ,new Date(2020,3,28)),
-    new Quote (4,'a bird in hand is worth two in the bush','be grateful of what you have at hand, what you wish foy could be vanity.' ,new Date(2020,3,28)),
-    new Quote (5,'The great Gatsby','overcome all odds to be the greatest you could ever be.' ,new Date(2020,3,28)),
+    new Quote (1, 'The American Dream','there shall come a point where everyone will be equal',new Date(2020,2,28)),
+    new Quote (2,'The rich also cry','it does not matter how rich you are, some things, money cannot buy',new Date(2020,2,28)),
+    new Quote (3,'to catch a mockingBird','what are your approaches to life, are they worht the while' ,new Date(2020,2,28)),
+    new Quote (4,'a bird in hand is worth two in the bush','be grateful of what you have at hand, what you wish foy could be vanity.' ,new Date(2020,2,28)),
+    new Quote (5,'The great Gatsby','overcome all odds to be the greatest you could ever be.' ,new Date(2020,2,28)),
     new Quote (6,'In the quest to find yourself, you may lose yourself', 'have vision and be focused' ,new Date(2020,3,28)),
   ];
 
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-  completeGoal(isComplete, index){
+  
+  deleteQuote(isComplete, index){
     if (isComplete) {
-      this.quotes.splice(index, 1);
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
     }
   }
 
