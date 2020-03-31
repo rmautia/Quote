@@ -8,13 +8,15 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { HighlightDirective } from './highlight.directive';
 import { RelativeTimePipe } from './pipe/relative-time.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     QuoteDetailComponent,
     HighlightDirective,
-    RelativeTimePipe
+    RelativeTimePipe,
+    
   ],
   imports: [
     BrowserModule,
