@@ -17,6 +17,13 @@ export class QuoteComponent implements OnInit {
     new Quote (6,'Michelle Ngele', 'have vision and be focused' ,new Date(2020,3,28)),
   ];
 
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
+
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
