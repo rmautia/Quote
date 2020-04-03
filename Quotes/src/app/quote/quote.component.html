@@ -8,7 +8,7 @@
             <div *ngFor='let quote of quotes;let i = index'>
                 <div>
                     <h4 appHighlight>{{quote.name}} Said on {{quote.completeDate|date}} </h4>
-                    <div style="width: 130px;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toggleDetails(i)'>Show Details</a> </div>
+                    <div style="width: 130px;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toggleDetails(i)'>Details</a> </div>
                 </div>
 
                 <div *ngIf='quote.showDescription'>
@@ -21,7 +21,7 @@
         <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
     </div>
 
-    <p *ngIf='quotes.length > 5'> <em> Good work fam, keep contributing your quotes, someone needs you out there</em></p>
+    <p class="pg" *ngIf='quotes.length > 5'> <em> Good work fam, keep contributing your quotes, someone needs you out there</em></p>
 </div>
 
 
