@@ -1,5 +1,5 @@
-<div class="container">
-<h1>Inspirational quotes</h1>
+<div style="margin-left: 15%;" class="container">
+<h1 class="quotesheader"><strong>Inspirational quotes</strong></h1>
 <hr>
 
 
@@ -7,8 +7,8 @@
         <div class="col-md-6">
             <div *ngFor='let quote of quotes;let i = index'>
                 <div>
-                    <h4 appHighlight>{{quote.name}} made on {{quote.completeDate|date}} </h4>
-                    <button (click)='toggleDetails(i)' class="btn btn-success">Quote Details</button>
+                    <h4 appHighlight>{{quote.name}} Said on {{quote.completeDate|date}} </h4>
+                    <div style="width: 130px;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toggleDetails(i)'>Show Details</a> </div>
                 </div>
 
                 <div *ngIf='quote.showDescription'>
@@ -23,3 +23,6 @@
 
     <p *ngIf='quotes.length > 5'> <em> Good work fam, keep contributing your quotes, someone needs you out there</em></p>
 </div>
+
+
+

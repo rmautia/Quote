@@ -4,7 +4,7 @@ This project was generated with [Angular CLI] version 6.2.1.
 
 # DESCRIPTION
 
-This is a Quote application created that allows users to add Quotes view them and either like or dislike other submited Quotes.
+This is a Quote application created that allows users to add Quotes view them and either like or dislike other submited Quotes. can be accessed online at https://github.com/rmautia/Quote .
 
 ## User Story
 - User can view submited quotes.
