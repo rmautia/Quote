@@ -37,3 +37,11 @@ a.animated-button.thar-one:before {
 	background: greenyellow;
 	transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
+#edit {
+	background: url("https://mdbootstrap.com/img/Photos/Others/img%20(42).jpg")no-repeat center center;
+	background-size: cover;
+
+}
+.form-group {
+	background: transparent;
+}
